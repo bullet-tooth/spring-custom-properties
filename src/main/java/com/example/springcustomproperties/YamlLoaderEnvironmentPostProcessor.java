@@ -13,6 +13,9 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.ResourcePatternUtils;
 
+/**
+ * Loads yaml properties and adds them to {@link org.springframework.core.env.Environment}
+ */
 public class YamlLoaderEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
   private final YamlPropertySourceLoader loader = new YamlPropertySourceLoader();
