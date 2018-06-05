@@ -35,7 +35,7 @@ public class YamlLoaderEnvironmentPostProcessor implements EnvironmentPostProces
       throw new IllegalArgumentException("Resource " + path + " does not exist");
     }
     try {
-      return this.loader.load("custom-resource", path).get(0);
+      return this.loader.load(path.getFilename(), path).get(0);
     } catch (IOException ex) {
       throw new IllegalStateException(
           "Failed to load yaml configuration from " + path, ex);
